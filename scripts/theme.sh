@@ -27,7 +27,8 @@ set_theme() {
       yellow=$lotus_teal_3
       ;;
     *)
-      white=$fuji_white
+      # white=$fuji_white
+      white=$white
       gray=$sumi_ink_4
       dark_gray=$sumi_ink_3
       light_purple=$sumi_ink_5

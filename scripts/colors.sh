@@ -1,5 +1,6 @@
   # Kanagawa Color Pallette
 
+  white='#ffffff'
   fuji_white='#dcd7ba'
   sumi_ink_4='#2a2a37'
   sumi_ink_2='#1a1a22'
