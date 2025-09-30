@@ -27,18 +27,26 @@ set_theme() {
       yellow=$lotus_teal_3
       ;;
     *)
-      # white=$fuji_white
-      white=$white
-      gray=$sumi_ink_4
-      dark_gray=$sumi_ink_3
-      light_purple=$sumi_ink_5
-      dark_purple=$sumi_ink_6
+      #white=$fuji_white
+      #white=$lotus_white_3
+      #white=$old_white
+      white=$lotus_cyan
+      #gray=$sumi_ink_4
+      gray=$wave_blue_2
+      #dark_gray=$sumi_ink_3
+      dark_gray=$wave_blue_2
+      #light_purple=$sumi_ink_5
+      #dark_purple=$sumi_ink_6
+      light_purple=$katana_gray
+      dark_purple=$dragon_blue
       cyan=$wave_aqua
-      green=$spring_violet_1
+      #green=$spring_violet_1
+      green=$dragon_green
       orange=$autumn_orange
       red=$wave_red
       pink=$sakura_pink
       yellow=$ronin_yellow
+      black=$sumi_ink_0
       ;;
   esac
 }
