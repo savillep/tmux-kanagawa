@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# homelab
 # setting the locale, some users have issues with different locales, this forces the correct one
 export LC_ALL=en_US.UTF-8
 
@@ -27,7 +28,7 @@ main() {
   fixed_location=$(get_tmux_option "@kanagawa-fixed-location")
   show_powerline=$(get_tmux_option "@kanagawa-show-powerline" false)
   show_flags=$(get_tmux_option "@kanagawa-show-flags" false)
-  status_bg=$(get_tmux_option "@kanagawa-status-bg" gray)
+  status_bg=$(get_tmux_option "@kanagawa-status-bg" winter_blue)
 
   # left icon area
   left_icon=$(get_tmux_option "@kanagawa-left-icon" session)
@@ -319,7 +320,9 @@ main() {
   if $show_powerline; then
     #tmux set-window-option -g window-status-current-format "#[fg=${gray},bg=${dark_purple}]${left_sep}#[fg=${white},bg=${dark_purple}] #I #W${current_flags} #[fg=${dark_purple},bg=${gray}]${left_sep}"
     #tmux set-window-option -g window-status-current-format "#[fg=${gray},bg=${dark_purple}]${left_sep}#[fg=${white},bg=${dark_purple}] #I:#W${current_flags} #[fg=${dark_purple},bg=${gray}]${left_sep}"
-    tmux set-window-option -g window-status-current-format "#[fg=${gray},bg=${sumi_ink_1}]${left_sep}#[fg=${white},bg=${sumi_ink_1}] #I:#W${current_flags} #[fg=${sumi_ink_1},bg=${gray}]${left_sep}"
+    # tmux set-window-option -g window-status-current-format "#[fg=${gray},bg=${sumi_ink_1}]${left_sep}#[fg=${white},bg=${sumi_ink_1}] #I:#W${current_flags} #[fg=${sumi_ink_1},bg=${gray}]${left_sep}"
+    # tmux set-window-option -g window-status-current-format "#[fg=${gray},bg=${dragon_blue}]${left_sep}#[fg=${white},bg=${dragon_blue}] #I:#W${current_flags} #[fg=${dragon_blue},bg=${gray}]${left_sep}"
+    tmux set-window-option -g window-status-current-format "#[fg=${winter_blue},bg=${dragon_blue}]${left_sep}#[fg=#ffffff,bold,bg=${dragon_blue}] #I:#W${current_flags} #[fg=${dragon_blue},nobold,bg=${winter_blue}]${left_sep}"
   else
     tmux set-window-option -g window-status-current-format "#[fg=${white},bg=${dark_purple}] #I #W${current_flags} "
   fi
@@ -328,7 +331,7 @@ main() {
     tmux set-window-option -g window-style "fg=${white},bg=${black}"
   fi
 
-  tmux set-window-option -g window-status-format "#[fg=${white}]#[bg=${gray}] #I:#W${flags}"
+  tmux set-window-option -g window-status-format "#[fg=${white}]#[bg=${winter_blue}] #I:#W${flags}"
   tmux set-window-option -g window-status-activity-style "bold"
   tmux set-window-option -g window-status-bell-style "bold"
 }
